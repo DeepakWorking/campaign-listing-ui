@@ -46,9 +46,9 @@ const AddCampaign = () => {
       const [isValid, message] = isValidCampaign(campaign, campaignList);
       setIsInValid(!isValid);
       setMessage(message);
-      setInputCampaign("");
       if (isValid) {
         dispatch(addCampaigns([campaign]));
+        setInputCampaign("");
       }
     } catch (e) {
       setIsInValid(true);
