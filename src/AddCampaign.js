@@ -47,6 +47,9 @@ const AddCampaign = () => {
       setIsInValid(!isValid);
       setMessage(message);
       setInputCampaign("");
+      if (isValid) {
+        dispatch(addCampaigns([campaign]));
+      }
     } catch (e) {
       setIsInValid(true);
       setMessage("Invalid Entry");

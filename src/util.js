@@ -34,6 +34,7 @@ export const isValidDate = (dateString) => {
 
 export const isValidCampaign = (campaign, campaignList) => {
   try {
+    if (!Object.keys(campaign).length) return [false, "Invalid Entry"];
     if (!campaign["id"] || isNaN(campaign["id"])) {
       return [false, "Enter valid Id!"];
     }
