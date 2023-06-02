@@ -1,38 +1,71 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 20px;
+  .campaign-data-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+}
+.floating-filter {
+  display: flex;
+  align-items: center;
+}
+.active-cell-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: flex;
+}
+.inactive {
+  background: #de1a24;
+}
+.active {
+  background: #3f8f29;
+}
+.input-filter {
+  padding: 2px;
+}
+.add-campaign-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 40px;
+}
+.add-campaign-input {
+  height: 60px;
+  width: 800px;
+  padding: 10px;
+}
+.add-campaign-input:focus {
+  outline: 3px solid transparent;
+}
+.add-campaign-button {
+  border: 1px solid #0066cc;
+  background-color: #0099cc;
+  color: #ffffff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.add-campaign-buttonbutton:hover {
+  border: 1px solid #0099cc;
+  background-color: #00aacc;
+  color: #ffffff;
+  padding: 5px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-campaign-button:disabled,
+.add-campaign-button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: none;
 }
